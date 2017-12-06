@@ -15,7 +15,6 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
 lib64/
 parts/
 sdist/
@@ -99,3 +98,15 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# VS Code files
+.vscode
+
+data/iam-database/iam_lines.db
+data/iam-database/iam_words.db
+data/iam-database/lines
+data/iam-database/lines.txt
+data/iam-database/words
+data/iam-database/words.txt
+
+references/*.pdf
