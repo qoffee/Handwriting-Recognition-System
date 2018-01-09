@@ -110,3 +110,5 @@ data/iam-database/words
 data/iam-database/words.txt
 
 references/*.pdf
+data/iam-database/train_words_images.npz
+data/iam-database/train_words_text.json
