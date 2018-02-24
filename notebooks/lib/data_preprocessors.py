@@ -2,11 +2,13 @@ from PIL import Image
 
 def scale(image, max_size):
     """
-    image is a PIL Image object
-    max_size is a tuple of ints
-
     resize 'image' to 'max_size' keeping the aspect ratio 
     and place it in center of white 'max_size' image 
+
+    Arguments:
+
+    image -- a PIL Image object
+    max_size -- a tuple of 2 ints
     """
     im_aspect = float(image.size[0])/float(image.size[1])
     out_aspect = float(max_size[0])/float(max_size[1])

@@ -63,6 +63,7 @@ class WordModel:
     def get_keras_model(self):
         return self._model
     
-    def summary(self):
-        pass
+    def save(self, file_path):
+        return self._model.save(file_path)
+    
  

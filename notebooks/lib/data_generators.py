@@ -30,6 +30,7 @@ class WordsDatasetIterator:
 
         # Start iterator index at zero
         self.indices = list(range(len(self.ground_truth_labels)))
+        self.current_index = 0
         self.reset_index()
     
     def get_vocabulary_size(self):

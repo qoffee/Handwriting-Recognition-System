@@ -26,13 +26,16 @@ for i in tqdm(range(len(frame))):
     image_path = path.join(data_dir_path, row.image_path)
     try:
         image = Image.open(image_path)
-        image = image.point(lambda level: 255 if level > row.gray_level else 0)
-
-        image = scale(image, target_size)
-        images.append(np.array(image))
-        texts.append(row.tokens)
     except OSError as e:
         print ('Error: ' + str(e))
+        continue
+        # Some images are empty files. 
+        # Skip those and move on to next image.
+    
+    image = image.point(lambda level: 255 if level > row.gray_level else 0)
+    image = scale(image, target_size)
+    images.append(np.array(image))
+    texts.append(row.tokens)
 
 images = np.stack(images, axis=0)
 #print (images.shape)
